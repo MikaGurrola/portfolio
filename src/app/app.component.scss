@@ -1,0 +1,16 @@
+.nav-container {
+  padding: 20px 15px;
+
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  justify-content: flex-start;
+}
+
+.top-container {
+  height: 100%;
+  background: var(--base2);
+}

@@ -1,11 +1,30 @@
-<div class="nav-container">
-  <nav class="nav">
-    <a routerLink="/" class="btn">Home</a>
-    <a routerLink="/projects" class="btn">Work</a>
-    <a routerLink="/asdf" class="btn">404</a>
-  </nav>
-</div>
+<div class="top-container">
 
-<div class="router-container" [@routerTransition]="getState(o)">
-  <router-outlet #o="outlet"></router-outlet>
+  <div class="nav-container">
+    <nav class="nav">
+      <a 
+        routerLink="/" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}"
+        class="button button--tertiary"
+      >Home</a>
+      <a 
+        routerLink="/projects" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}"
+        class="button button--tertiary"
+      >Work</a>
+      <a 
+        routerLink="/asdf" 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}"
+        class="button button--tertiary"
+      >404</a>
+    </nav>
+  </div>
+  
+  <div class="router-container" [@routerTransition]="getState(o)">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+  
 </div>

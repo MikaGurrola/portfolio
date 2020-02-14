@@ -1,4 +1,4 @@
-button {
+.button {
   border-radius: 10px;
   padding: 10px 15px;
   max-width: 500px;
@@ -6,6 +6,7 @@ button {
   line-height: 22px;
   font-weight: 900;
   text-transform: uppercase;
+  text-decoration: none;
   transition: var(--shadow-transition);
   width: fit-content;
 
@@ -65,25 +66,27 @@ button {
     }
 
     &:hover,
+    &:focus,
     &:active,
-    &:focus {
+    .active {
       color: var(--base3);
       background: var(--base2);
       border-color: var(--base3);
       box-shadow: unset;
     }
   }
-}
 
-.tertiary {
-  box-shadow: var(--base-shadow-neutral);
+  &--tertiary {
+    box-shadow: var(--base-shadow-neutral);
 
-  &:hover, &:active, &:focus {
-    box-shadow: var(--base-shadow-neutral-active);
+    &:hover,
+    &:focus, 
+    &:active,
+    .active {
+      box-shadow: var(--base-shadow-neutral-active);
+    }
   }
 }
-
-
 
 
 .primary {
