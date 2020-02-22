@@ -1,17 +1,20 @@
 <div class="container container--center">
 
-  <div class="project">
-    <div>
-      <h2>Agency Work</h2>
-    </div>
-  </div>
 
+  <div class="title-container">
+    <h1 class="title">Agency Work</h1>
+  </div>
   <div class="project">
     <div class="project__header">
-      <h2>Space Coast Culture</h2>
+      <h3>Space Coast Culture</h3>
       <h4>WordPress</h4>
     </div>
-    <img class="project__image" src="../../../assets/images/sites/spacecoast.jpg" alt="A screenshot of Space Coast Culture site">
+    <picture class="project__image">
+      <source media="(max-width: 415px)" srcset="/assets/images/sites/spacecoast-mobile.jpg">
+      <source media="(max-width: 768px)" srcset="/assets/images/sites/spacecoast-small.jpg">
+      <source media="(min-width: 601px)" srcset="/assets/images/sites/spacecoast.jpg">
+      <img src="/assets/images/sites/spacecoast.jpg" alt="A screenshot of Space Coast Culture site">
+    </picture>
     <div class="project__footer">
       <p>This website highlights the artists and entrepreneurs of Florida's SpaceCoast that showcase their unique scene.</p>
       <a href="https://spacecoastculture.com" class="button button--tertiary arrow" target="_blank" rel="noopener noreferrer">Visit Site</a>
@@ -21,10 +24,15 @@
 
   <div class="project">
     <div class="project__header">
-      <h2>Tech Helpline</h2>
+      <h3>Tech Helpline</h3>
       <h4>WordPress</h4>
     </div>
-    <img class="project__image" src="../../../assets/images/sites/tech.jpg" alt="A screenshot of Techhelpline site">
+    <picture class="project__image">
+      <source media="(max-width: 415px)" srcset="/assets/images/sites/tech-mobile.jpg">
+      <source media="(max-width: 768px)" srcset="/assets/images/sites/tech-small.jpg">
+      <source media="(min-width: 601px)" srcset="/assets/images/sites/tech.jpg">
+      <img src="/assets/images/sites/tech.jpg" alt="A screenshot of Techhelpline site">
+    </picture>
     <div class="project__footer">
       <p>A service to assist users of all experience levels navigate the world of tech.</p>
       <a href="https://www.techhelpline.com" class="button button--tertiary arrow" target="_blank" rel="noopener noreferrer">Visit Site</a>
@@ -34,10 +42,15 @@
 
   <div class="project">
     <div class="project__header">
-      <h2>BEX Realty</h2>
+      <h3>BEX Realty</h3>
       <h4>WordPress</h4>
     </div>
-    <img class="project__image" src="../../../assets/images/sites/bex.jpg" alt="A screenshot of BEX Realty site">
+    <picture class="project__image">
+      <source media="(max-width: 415px)" srcset="/assets/images/sites/bex-mobile.jpg">
+      <source media="(max-width: 768px)" srcset="/assets/images/sites/bex-small.jpg">
+      <source media="(min-width: 601px)" srcset="/assets/images/sites/bex.jpg">
+      <img src="/assets/images/sites/bex.jpg" alt="A screenshot of BEX Realty site">
+    </picture>
     <div class="project__footer">
       <p>Realtors can list their hotest properties for buyers to interact with their listings.</p>
       <a href="https://www.bexrealty.com" class="button button--tertiary arrow" target="_blank" rel="noopener noreferrer">Visit Site</a>
@@ -45,21 +58,21 @@
   </div>
 
 
-
-  <div class="project">
-    <div>
-      <h2>Side Projects</h2>
-    </div>
+  <div class="title-container">
+    <h2 class="title">Side Projects</h2>
   </div>
-
-
 
   <div class="project">
     <div class="project__header">
-      <h2>Picture Palette</h2>
+      <h3>Picture Palette</h3>
       <h4>Angular 4 • VibrantJS • Unsplash API</h4>
     </div>
-    <img class="project__image" src="../../../assets/images/sites/ppp.jpg" alt="A screenshot of Angular side project">
+    <picture class="project__image">
+      <source media="(max-width: 415px)" srcset="/assets/images/sites/ppp-mobile.jpg">
+      <source media="(max-width: 768px)" srcset="/assets/images/sites/ppp-small.jpg">
+      <source media="(min-width: 601px)" srcset="/assets/images/sites/ppp.jpg">
+      <img src="/assets/images/sites/ppp.jpg" alt="A screenshot of Angular side project">
+    </picture>
     <div class="project__footer">
       <p>My first side project built with Angular 4, played around with router transitions, lazy loading routes, virbrantJS and the Unslpash API.</p>
       <div class="buttons">
@@ -68,4 +81,5 @@
       </div>
     </div>
   </div>
+
 </div>

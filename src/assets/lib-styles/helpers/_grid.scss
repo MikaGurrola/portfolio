@@ -16,10 +16,13 @@
 
 .container {
   padding: 150px 100px 20px 100px;
-
-  @media screen and (max-width: 670px) {
+  @media screen and (max-width: 1200px) {
     padding: 150px 20px 20px 20px;
   }
+
+  // @media screen and (max-width: 670px) {
+  //   padding: 150px 20px 20px 20px;
+  // }
 
   @media screen and (max-width: 414px) {
     padding: 50px 20px 20px 20px;

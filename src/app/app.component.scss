@@ -8,7 +8,7 @@
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-bottom: 1px solid transparent;
 
-  @media screen and (max-width: 1156px) {
+  @media screen and (max-width: 1200px) {
     background: var(--base2);
     &.scrolled {
       border-bottom: 2px solid var(--baseDark1);

@@ -1,15 +1,14 @@
 .project {
   display: grid;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 100px 50px 200px;
+  // margin: 0 auto;
+  padding: 0 0 20px 0;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
-  grid-template-areas: 
-    "header image"
-    "footer image"
+  grid-template-areas:
+    "header"
+    "image"
+    "footer"
   ;
-  grid-template-columns: 400px 1fr;
-  grid-column-gap: 50px;
 
   &__header {
     grid-area: header;
@@ -17,48 +16,68 @@
   }
   &__image {
     grid-area: image;
-    display: inline-block;
-    border: 6px solid var(--base1);
     align-self: center;
+    img {
+      display: inline-block;
+      width: calc(100% - 12px);
+      border: 6px solid var(--base1);
+    }
   }
   &__footer {
     grid-area: footer;
     align-self: start;
+    position: absolute;
+    bottom: 23px;
+    background: var(--base2);
+    padding: 15px 0 0 0;
+    border-top: 6px solid var(--base1);
+
+    @media screen and (min-width: 416px) {
+      position: unset;
+      bottom: unset;
+      background: unset;
+      padding: unset;
+      background: unset;
+      border-top: unset;
+    }
+
   }
 
-  &:nth-of-type(even) {
-    grid-template-columns: 1fr 400px;
-    grid-template-areas: 
-      "image header "
-      "image footer"
-    ;
 
-    @media screen and (max-width: 980px) {
-      grid-template-columns: 1fr;
+  &:nth-of-type(even) {
+
+    @media screen and (min-width: 769px) {
+      grid-gap: 20px;
+      grid-template-columns: 1fr 350px;
       grid-template-areas:
-        "header"
-        "image"
-        "footer"
+        "image header"
+        "image footer"
       ;
+    }
+
+    @media screen and (min-width: 1201px) {
+      grid-gap: 30px;
     }
   }
 
-  @media screen and (max-width: 1400px)  {
-    grid-template-columns: 1fr 1fr;
-    padding: 0 100px 50px 150px;
-  }
-
-  @media screen and (max-width: 1200px) {
-    padding: 0 15px 20px 0;
-  }
-
-  @media screen and (max-width: 980px) {
-    grid-template-columns: 1fr;
+  @media screen and (min-width: 769px) {
+    padding: 0 0 20px 0;
+    grid-gap: 20px;
+    grid-template-columns: 350px 1fr;
     grid-template-areas: 
-    "header"
-    "image"
-    "footer"
+      "header image"
+      "footer image"
     ;
+  }
+
+  @media screen and (min-width: 1201px) {
+    padding: 0 10px 50px 144px;
+    grid-gap: 30px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    padding: 0 140px 50px 280px;
+    grid-gap: 50px;
   }
 
   .button, h4 {
@@ -71,4 +90,21 @@
   grid-gap: 15px;
   grid-template-columns: 1fr 1fr;
   max-width: fit-content;
+}
+
+.title-container {
+  padding: 0;
+  @media screen and (min-width: 1200px) {
+    padding: 0 100px 0 200px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    padding: 0 140px 0 280px;
+  }
+}
+
+.title {
+  text-align: center;
+  border-bottom: 2px solid var(--baseDark1);
+  padding-bottom: 20px;
 }
