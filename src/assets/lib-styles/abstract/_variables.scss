@@ -1,4 +1,4 @@
-:root {
+body {
   // base  color
   --base1: #ECEEEF;
   --base2: #B3BCC2;
@@ -19,17 +19,21 @@
   // FF3D00
 
 
-  @media (prefers-color-scheme: dark) {
-
-    --base1: #2F4858;
-    --base2: #233541;
-    --base3: #162128;
-    --baseDark1: #ECEEEF;
-    --baseDark2: #B3BCC2;
-    --baseDark3: #7A8A94;
-
-
-  }
-
+  // @media (prefers-color-scheme: dark) {
+  //   --base1: #2F4858;
+  //   --base2: #233541;
+  //   --base3: #162128;
+  //   --baseDark1: #ECEEEF;
+  //   --baseDark2: #B3BCC2;
+  //   --baseDark3: #7A8A94;
+  // }
 }
 
+[data-theme="dark"] {
+  --base1: #2F4858;
+  --base2: #233541;
+  --base3: #162128;
+  --baseDark1: #ECEEEF;
+  --baseDark2: #B3BCC2;
+  --baseDark3: #7A8A94;
+}

@@ -1,14 +1,14 @@
 .button {
   border-radius: 10px;
   padding: 10px 15px;
-  max-width: 500px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 22px;
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
   transition: var(--shadow-transition);
   width: fit-content;
+  display: inline-block;
 
   // props to change for other styles
   color: var(--baseDark1);
@@ -16,9 +16,9 @@
   border: 2px solid var(--base2);
   box-shadow: var(--base-shadow);
 
-  @media (prefers-color-scheme: dark) {
-    color: var(--baseDark2);
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   color: var(--baseDark2);
+  // }
 
   span {
     transition: var(--shadow-transition);
@@ -34,7 +34,6 @@
     outline: none;
     box-shadow: var(--base-shadow-active);
     color: var(--baseDark2);
-    border-color: var(--base3);
 
     span {
       text-shadow: -1px -1px 3px var(--base1), 1px 1px 3px var(--baseDark1);
@@ -48,6 +47,12 @@
 
     @media (prefers-color-scheme: dark) {
       color: var(--baseDark1);
+    }
+  }
+
+  &:active, &:focus, &.active {
+    border-color: var(--baseDark1);
+    @media (prefers-color-scheme: dark) {
       border-color: var(--baseDark1);
     }
   }
@@ -141,4 +146,11 @@
     }
   }
 
+}
+
+.arrow:after {
+  content: '\2192';
+  display: inline-block;
+  margin-left: 7px;
+  font-size: 15px;
 }

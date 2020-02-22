@@ -108,8 +108,12 @@ html {
   }
 }
 
+div { position: relative; }
+
 html, body {
   height: 100%;
+  background: var(--base2);
+  color: var(--baseDark2);
 }
 
 img {

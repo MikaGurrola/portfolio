@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { routerTransition } from './router.animations';
 
 @Component({
@@ -8,7 +8,17 @@ import { routerTransition } from './router.animations';
   animations: [ routerTransition ]
 })
 export class AppComponent {
-  darkTheme: boolean = false;
+  darkTheme = false;
+  scrolled = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e) {
+    if (window.pageYOffset > 86) {
+      this.scrolled = true;
+    } else {
+      this.scrolled = false;
+    }
+  }
 
   getState(outlet) {
     return outlet.activatedRouteData.state;
