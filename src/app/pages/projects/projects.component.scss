@@ -1,6 +1,5 @@
 .project {
   display: grid;
-  // margin: 0 auto;
   padding: 0 0 20px 0;
   grid-template-columns: 1fr;
   grid-gap: 20px;
@@ -27,7 +26,7 @@
     grid-area: footer;
     align-self: start;
     position: absolute;
-    bottom: 23px;
+    bottom: 0;
     background: var(--base2);
     padding: 15px 0 0 0;
     border-top: 6px solid var(--base1);
