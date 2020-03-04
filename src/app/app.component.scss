@@ -44,7 +44,7 @@ nav {
   min-height: calc(100vh + 200px);
   overflow: hidden;
   padding-bottom: 250px;
-  @media screen and (max-width: 560px) {
+  @media screen and (min-width: 560px) {
     padding-bottom: 400px;
   }
 }
