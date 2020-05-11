@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-header__heading">{{data.projectName}}</h3>
+    <div class="card-header__sub-heading">
+      <div class="card-header__icon"><img src="{{data.icon}}" alt="Logo for {{data.projectName}}"></div>
+      <h4>{{data.projectTech}}</h4>
+    </div>
+  </div>
+
+  <div class="card-media">
+    <img src="{{data.desktop}}" alt="A screenshot of the desktop layout">
+    <img src="{{data.mobile}}" alt="A screenshot of the mobile layout">
+  </div>
+
+  <div class="card-content">
+    <p>{{data.summary}}</p>
+    <a 
+      *ngFor="let link of data.links"
+      href="{{link.url}}"
+      target="_blank" rel="noopener noreferrer"
+    >
+      {{link.text}}
+    </a>
+  </div>
+
+
+</div>
