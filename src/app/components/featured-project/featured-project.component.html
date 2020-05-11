@@ -1,15 +1,17 @@
-<div class="card">
+<div class="card" appLazyLoad (deferLoad)="this.loadImage = true">
   <div class="card-header">
     <h3 class="card-header__heading">{{data.projectName}}</h3>
     <div class="card-header__sub-heading">
-      <div class="card-header__icon"><img src="{{data.icon}}" alt="Logo for {{data.projectName}}"></div>
+      <div class="card-header__icon">
+        <img *ngIf="loadImage" src="{{data.icon}}" alt="Logo for {{data.projectName}}">
+      </div>
       <h4>{{data.projectTech}}</h4>
     </div>
   </div>
 
-  <div class="card-media">
-    <img src="{{data.desktop}}" alt="A screenshot of the desktop layout">
-    <img src="{{data.mobile}}" alt="A screenshot of the mobile layout">
+  <div class="card-media" >
+    <img *ngIf="loadImage" src="{{data.desktop}}" alt="A screenshot of the desktop layout">
+    <img *ngIf="loadImage" src="{{data.mobile}}" alt="A screenshot of the mobile layout">
   </div>
 
   <div class="card-content">

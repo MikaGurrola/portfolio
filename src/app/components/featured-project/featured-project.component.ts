@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FeaturedProjectComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data: any
+  loadImage = false
   constructor() { }
 
   ngOnInit(): void {}
